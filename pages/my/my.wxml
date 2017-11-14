@@ -1,0 +1,58 @@
+<view class='container'>
+    <view class='img'>
+        <image src="{{avatarUrl}}" mode='widthFix'></image>
+        <view wx:if="{{nickname}}">
+            <view>{{nickname}}</view>
+            <view>已绑定微信</view>
+        </view>
+        <view class='setting' bindtap='setting'>设置</view>
+    </view>
+    <navigator url='../../pages/order/order?state=已完成订单&&index=6'>
+        <view class='MaxWidth allready'>
+            <text>已完成订单</text>
+            <view>
+                <text>查看全部</text>
+                <image src='../../images/come.png' mode='widthFix'></image>
+            </view>
+        </view>
+    </navigator>
+    <view class='order'>
+        <view class='order-img {{index===unindex?"color":""}}' wx:for="{{text}}" wx:key="index" data-index='{{index}}' data-text='{{item.text}}' bindtap='choose'>
+            <view class='image' data-index='{{index}}' data-text='{{item.text}}'>
+                <image src='{{index===unindex?url[index]:item.url}}' mode='wodthFix' data-index='{{index}}' data-text='{{item.text}}'></image>
+            </view>
+            <text data-index='{{index}}' data-text='{{item.text}}' catchtap='choose'>{{item.text}}</text>
+        </view>
+    </view>
+
+    <view class='MaxWidth address'>
+        <text>收货地址</text>
+        <image src='../../images/come.png' mode='widthFix'></image>
+    </view>
+    <view class='MaxWidth address' style='margin-top:0;'>
+        <text>我的收藏</text>
+        <image src='../../images/come.png' mode='widthFix'></image>
+    </view>
+
+
+    <view class='title'>
+        <text>——</text> 骨灰级卖家推存
+        <text>——</text>
+    </view>
+    <view class='con'>
+        <navigator url="../details/details?id={{item.id}}" wx:for="{{cons}}" wx:key="index">
+            <image src="{{item.imgurl}}" class="body-con-img" mode='widthFix'></image>
+            <view class="con-text">{{item.con}}</view>
+            <view class='monthSale'>销量：{{item.monthSale}}</view>
+            <view class="con-footer">
+                <view class="footer-left">
+                    ￥{{item.price}}
+                </view>
+                <view class='avatarUrl'>
+                    <image src="https://wx.qlogo.cn/mmopen/vi_32/JiaaPP4W5L72nvSiak82Xpysk7MaiajoBDzybFkJeW51EPzuT5ujtTkeGb8vSdmBP3BLq3ibRzATymbbrBib0Fsh3vw/0" mode='widthFix'></image>
+                    <image src="https://wx.qlogo.cn/mmopen/vi_32/JiaaPP4W5L72nvSiak82Xpysk7MaiajoBDzybFkJeW51EPzuT5ujtTkeGb8vSdmBP3BLq3ibRzATymbbrBib0Fsh3vw/0" mode='widthFix'></image>
+                </view>
+            </view>
+        </navigator>
+    </view>
+</view>

@@ -1,0 +1,49 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/logs/logs",
+        "pages/all/all",
+        "pages/my/my",
+        "pages/new/new",
+        "pages/order/order",
+        "pages/details/details"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "color": "#999",
+        "selectedColor": "#000",
+        "borderStyle": "white",
+        "backgroundColor": "#fff",
+        "box-shadow": "0 0 6px 0",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "iconPath": "images/home.png",
+                "selectedIconPath": "images/home_ing.png",
+                "text": "首页"
+            },
+            {
+                "pagePath": "pages/new/new",
+                "iconPath": "images/new.png",
+                "selectedIconPath": "images/new_ing.png",
+                "text": "新品"
+            },
+            {
+                "pagePath": "pages/all/all",
+                "iconPath": "images/all.png",
+                "selectedIconPath": "images/all_ing.png",
+                "text": "全部"
+            },
+            {
+                "pagePath": "pages/my/my",
+                "iconPath": "images/my.png",
+                "selectedIconPath": "images/my_ing.png",
+                "text": "我的"
+            }
+        ]
+    }
+}

@@ -1,0 +1,149 @@
+<view class='container'>
+    <view class='MaxWidth allready' bindtap='unindex'>
+        <text>已完成订单</text>
+        <view>
+            <text>查看全部</text>
+            <image src='../../images/come.png' mode='widthFix'></image>
+        </view>
+    </view>
+
+    <view class='order'>
+        <view class='order-img {{index===unindex?"color":""}}' wx:for="{{text}}" wx:key="index" data-index='{{index}}' data-text='{{item.text}}' bindtap='choose'>
+            <view class='image' data-index='{{index}}' data-text='{{item.text}}'>
+                <image src='{{index===unindex?url[index]:item.url}}' mode='wodthFix' data-index='{{index}}' data-text='{{item.text}}'></image>
+            </view>
+            <text data-index='{{index}}' data-text='{{item.text}}' catchtap='choose'>{{item.text}}</text>
+        </view>
+    </view>
+
+    <view class='cons'>
+        <view hidden="{{unindex!==0}}">
+
+            <view class='block' wx:for="{{cons}}" wx:key="index">
+                <view class="img">
+                    <image src='{{item.imgurl}}' alt="苏州皓月网络科技有限公司" mode='widthFix'></image>
+                </view>
+                <view class='con'>
+                    <text>{{item.con}}</text>
+                    <view class='details'>
+                        <view>颜色:{{item.color}} \ 尺码：{{item.size}} \ 数量：{{item.amount}}</view>
+                        <text>￥{{item.priceNew}}</text>
+                    </view>
+                    <form report-submit="true">
+                        <view class='diffent'>
+                            <button form-type='submit' bindsubmit='' class='background-cancle'>取消订单</button>
+                            <button form-type='submit' bindsubmit='' class='bold-pay'>付款</button>
+                        </view>
+                    </form>
+                </view>
+            </view>
+
+        </view>
+        <view hidden="{{unindex!==1}}">
+            <view class='block' wx:for="{{cons}}" wx:key="index">
+                <view class="img">
+                    <image src='{{item.imgurl}}' alt="苏州皓月网络科技有限公司" mode='widthFix'></image>
+                </view>
+                <view class='con'>
+                    <text>{{item.con}}</text>
+                    <view class='details'>
+                        <view>颜色:{{item.color}} \ 尺码：{{item.size}} \ 数量：{{item.amount}}</view>
+                        <text>￥{{item.priceNew}}</text>
+                    </view>
+                    <form report-submit="true">
+                        <view class='diffent'>
+                            <button form-type='submit' bindsubmit='' class='background-cancle'>联系客服</button>
+                            <button form-type='submit' bindsubmit='' class='bold-pay'>邀请好友拼单</button>
+                        </view>
+                    </form>
+                </view>
+            </view>
+        </view>
+        <view hidden="{{unindex!==2}}">
+            <view class='block' wx:for="{{cons}}" wx:key="index">
+                <view class="img">
+                    <image src='{{item.imgurl}}' alt="苏州皓月网络科技有限公司" mode='widthFix'></image>
+                </view>
+                <view class='con'>
+                    <text>{{item.con}}</text>
+                    <view class='details'>
+                        <view>颜色:{{item.color}} \ 尺码：{{item.size}} \ 数量：{{item.amount}}</view>
+                        <text>￥{{item.priceNew}}</text>
+                    </view>
+                    <form report-submit='true'>
+                        <view class='diffent'>
+                            <button form-type='submit' bindsubmit='' class='background-cancle'>联系客服</button>
+                            <button form-type='submit' bindsubmit='' class='bold-pay'>再次购买</button>
+                        </view>
+                    </form>
+
+                </view>
+            </view>
+        </view>
+        <view hidden="{{unindex!==3}}">
+            <view class='block' wx:for="{{cons}}" wx:key="index">
+                <view class="img">
+                    <image src='{{item.imgurl}}' alt="苏州皓月网络科技有限公司" mode='widthFix'></image>
+                </view>
+                <view class='con'>
+                    <text>{{item.con}}</text>
+                    <view class='details'>
+                        <view>颜色:{{item.color}} \ 尺码：{{item.size}} \ 数量：{{item.amount}}</view>
+                        <text>￥{{item.priceNew}}</text>
+                    </view>
+                    <form report-submit="true">
+                        <view class='diffent'>
+                            <button form-type='submit' bindsubmit='' class='background-cancle'>联系客服</button>
+                            <button form-type='submit' bindsubmit='' class='bold-pay'>确认收货</button>
+                        </view>
+                    </form>
+                </view>
+            </view>
+        </view>
+        <view hidden="{{unindex!==4}}">
+            <view class='block' wx:for="{{cons}}" wx:key="index">
+                <view class="img">
+                    <image src='{{item.imgurl}}' alt="苏州皓月网络科技有限公司" mode='widthFix'></image>
+                </view>
+                <view class='con'>
+                    <text>{{item.con}}</text>
+                    <view class='details'>
+                        <view>颜色:{{item.color}} \ 尺码：{{item.size}} \ 数量：{{item.amount}}</view>
+                        <text>￥{{item.priceNew}}</text>
+                    </view>
+                    <form report-submit="true">
+                        <view class='diffent'>
+                            <button form-type='submit' bindsubmit='' class='background-cancle'>查看物流</button>
+                            <button form-type='submit' bindsubmit='' class='background-cancle'>再次购买</button>
+                            <button form-type='submit' bindsubmit='' class='bold-pay'>立即评价</button>
+                        </view>
+                    </form>
+                </view>
+            </view>
+        </view>
+        <view hidden="{{unindex!==5}}">
+            <view class='block' wx:for="{{cons}}" wx:key="index">
+                <view class="img">
+                    <image src='{{item.imgurl}}' alt="苏州皓月网络科技有限公司" mode='widthFix'></image>
+                </view>
+                <view class='con'>
+                    <text>{{item.con}}</text>
+                    <view class='details'>
+                        <view>颜色:{{item.color}} \ 尺码：{{item.size}} \ 数量：{{item.amount}}</view>
+                        <text>￥{{item.priceNew}}</text>
+                    </view>
+                    <form report-submit='true'>
+                        <view class='diffent'>
+                            <button form-type='submit' bindsubmit="" class='background-cancle'>查看物流</button>
+                            <button form-type='submit' class='background-cancle'>删除</button>
+                            <button form-type='submit' class='black-button'>再次购买</button>
+                        </view>
+                    </form>
+                </view>
+            </view>
+        </view>
+        <view class='zanwu'>
+            暂无数据！
+        </view>
+    </view>
+</view>

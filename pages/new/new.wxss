@@ -1,0 +1,73 @@
+.container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+navigator {
+    width: 45%;
+    height: auto;
+    margin-bottom: 15rpx;
+    padding: 15rpx;
+    background: #fff;
+}
+
+navigator image {
+    width: 100%;
+}
+
+.block image {
+    width: 100%;
+}
+
+.con-text {
+    height: 60rpx;
+    width: 100%;
+    font-size: 25rpx;
+    color: #333;
+    line-height: 30rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.monthSale {
+    font-size: 25rpx;
+    color: #999;
+}
+
+.con-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.con-footer .footer-left {
+    font-size: 25rpx;
+    color: #f00;
+}
+
+.avatarUrl {
+    position: relative;
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.avatarUrl image {
+    width: 45rpx;
+    border-radius: 30rpx;
+    position: absolute;
+    top: -25rpx;
+    left: -45rpx;
+}
+
+.avatarUrl :first-child {
+    left: -70rpx;
+    z-index: 99;
+}

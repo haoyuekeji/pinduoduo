@@ -1,0 +1,17 @@
+<!--index.wxml-->
+<view class="container">
+    <view class='search'>
+        <view class='search-con'>
+            <icon type='search' size='18'></icon>
+            <input placeholder='输入商品名称'></input>
+        </view>
+    </view>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-active-color='#666' circular="true" wx:if='{{imgUrls}}'>
+        <block wx:for="{{imgUrls}}" wx:key="index">
+            <swiper-item data-index="{{index}}" bindtap='banner'>
+                <image src="{{item}}" class="slide-image" mode="widthFix" data-index="{{index}}"></image>
+            </swiper-item>
+        </block>
+    </swiper>
+    <image src='{{img}}' class='img' mode="widthFix"></image>
+</view>
