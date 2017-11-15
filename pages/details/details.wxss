@@ -1,0 +1,591 @@
+page {
+    font-family: "SourceHanSansCN-Medium";
+}
+
+.container swiper {
+    width: 100%;
+    height: 750rpx;
+}
+
+.container .slide-image {
+    width: 100%;
+}
+
+.padding {
+    padding: 0 30rpx;
+}
+
+.body {
+    font-size: 25rpx;
+    margin-top: 20rpx;
+}
+
+.con, .price, .guige, .express {
+    height: 80rpx;
+    margin-top: 10rpx;
+    font-weight: bold;
+    display: flex;
+}
+
+.con {
+    width: 75%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.con {
+    font-size: 30rpx;
+}
+
+.guige {
+    border: 1rpx solid #f2f2f2;
+    font-weight: normal;
+    height: 50rpx;
+    line-height: 50rpx;
+}
+
+.price {
+    height: 50rpx;
+    color: #f40000;
+    font-size: 30rpx;
+}
+
+.price-con {
+    width: 700rpx;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#share {
+    height: 100%;
+    flex-grow: 0.8;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+}
+
+#share image {
+    width: 18%;
+    position: absolute;
+    bottom: 55rpx;
+    right: 15rpx;
+}
+
+#share text {
+    width: 30%;
+    font-size: 23rpx;
+    color: #333;
+    text-align: right;
+    position: absolute;
+    bottom: 15rpx;
+    right: 20rpx;
+}
+
+.express-con {
+    height: 50rpx;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 25rpx;
+    line-height: 50rpx;
+}
+
+.express-con view {
+    width: 30%;
+}
+
+.nonetext, .price-num {
+    color: #ccc;
+    margin-left: 20rpx;
+    margin-top: 10rpx;
+    font-size: 25rpx;
+}
+
+.nonetext {
+    flex-grow: 0.5;
+    text-decoration: line-through;
+}
+
+.price-num {
+    flex-grow: 8;
+    text-align: right;
+    color: #999;
+}
+
+.guige {
+    justify-content: space-between;
+    line-height: 80rpx;
+}
+
+.guige .price-con {
+    width: auto;
+    font-size: 25rpx;
+    line-height: 50rpx;
+}
+
+.price-con image {
+    height: 22rpx;
+    width: 12rpx;
+    margin-top: 12rpx;
+}
+
+.details {
+    height: 80rpx;
+    width: 100%;
+    font-size: 35rpx;
+    text-align: center;
+    line-height: 80rpx;
+    margin-top: 30rpx;
+}
+
+.cover {
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+}
+
+.guige-details {
+    height: 60%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: #fff;
+}
+
+.guige-details icon {
+    position: absolute;
+    right: 30rpx;
+    top: 15rpx;
+}
+
+.img {
+    height: 200rpx;
+    width: 200rpx;
+    background: #fff;
+    padding: 5rpx;
+    box-shadow: 2rpx 2rpx 10rpx 2rpx #999;
+    margin: -35rpx 0 0 30rpx;
+    float: left;
+}
+
+.img image {
+    width: 200rpx;
+    height: 200rpx;
+}
+
+.cover-details {
+    height: 155rpx;
+    width: 400rpx;
+    float: left;
+    margin-left: 30rpx;
+}
+
+.cover-details view {
+    margin-top: 20rpx;
+    font-size: 24rpx;
+    color: #333;
+}
+
+.cover-details .cover-price {
+    color: #f40000;
+}
+
+.clear {
+    clear: both;
+}
+
+label {
+    font-size: 28rpx;
+    font-weight: bold;
+}
+
+.chima {
+    margin-top: 20rpx;
+    padding: 0 30rpx;
+    font-size: 30rpx;
+}
+
+.chima-details {
+    color: #666;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.yanse-details-view {
+    width: auto;
+    background: #f0f0f0;
+    border-radius: 24rpx;
+    text-align: center;
+    padding: 10rpx 50rpx;
+    box-sizing: border-box;
+    margin-right: 20rpx;
+    margin-top: 20rpx;
+}
+
+.chima-details-view {
+    height: 40rpx;
+    width: auto;
+    background: #f0f0f0;
+    border-radius: 20rpx;
+    line-height: 10rpx;
+    text-align: center;
+    padding: 15rpx 30rpx;
+    box-sizing: border-box;
+    margin-right: 20rpx;
+    margin-top: 20rpx;
+}
+
+.number {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30rpx;
+    margin-top: 20rpx;
+}
+
+.number-num {
+    display: flex;
+    font-size: 35rpx;
+    justify-content: center;
+}
+
+.number-num view {
+    height: 50rpx;
+    width: 50rpx;
+    line-height: 50rpx;
+    text-align: center;
+    border: 1rpx solid #ccc;
+    border-left: none;
+}
+
+.cover-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 30rpx;
+    text-align: center;
+    line-height: 50rpx;
+    position: absolute;
+    bottom: 20rpx;
+    left: 0;
+    width: 690rpx;
+    height: 80rpx;
+    font-size: 25rpx;
+}
+
+.cover-footer view {
+    margin-left: 30rpx;
+}
+
+.details-right-list {
+    width: 700rpx;
+    height: 100rpx;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 20rpx;
+}
+
+.details-right-list text {
+    height: 50rpx;
+    padding: 0 15rpx;
+    margin-top: 25rpx;
+    text-align: center;
+    line-height: 50rpx;
+    border-radius: 30rpx;
+    color: #333;
+}
+
+.one {
+    background: #f40000;
+    color: #fff;
+}
+
+.two {
+    background: #f54949;
+}
+
+.three {
+    background: #f59393;
+}
+
+.four {
+    background: #cdcdcd;
+}
+
+.details-right-con {
+    height: auto;
+    width: 100%;
+    text-align: center;
+}
+
+.details-right-con text {
+    color: #8f8f8f;
+    display: block;
+    padding: 300rpx 0;
+    font-size: 60rpx;
+}
+
+.cons-img {
+    width: 100%;
+    padding-bottom: 110rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cons-img text {
+    color: #999;
+    align-self: center;
+    display: block;
+    margin-top: 15rpx;
+}
+
+.cons-img image {
+    width: 100%;
+    margin-bottom: 15rpx;
+}
+
+.footer {
+    height: 110rpx;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background: #fff;
+    line-height: 130rpx;
+    display: flex;
+    justify-content: space-between;
+    z-index: 999;
+}
+
+.car {
+    width: 130rpx;
+    position: relative;
+}
+
+.footer image {
+    height: 60rpx;
+    width: 60rpx;
+    margin-left: 20rpx;
+}
+
+.dian {
+    height: 12rpx;
+    width: 12rpx;
+    background: #f40000;
+    border-radius: 10rpx;
+    position: absolute;
+    left: 75rpx;
+    top: 15rpx;
+}
+
+.footer-right {
+    height: 100%;
+    width: 500rpx;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    font-size: 30rpx;
+    text-align: center;
+}
+
+.footer-right-car, .footer-right-buy {
+    height: 60rpx;
+    width: 250rpx;
+    font-size: 30rpx;
+    line-height: 60rpx;
+    border-radius: 50rpx;
+    border: 1rpx solid rgb(255, 64, 129);
+    color: #e60012;
+}
+
+.footer-right-buy {
+    border: 1rpx solid #f40000;
+}
+
+.footer-right .footer-right-car, .footer-right .footer-right-buy {
+    height: 100%;
+    width: 250rpx;
+    line-height: 110rpx;
+    border-radius: 0;
+    background: rgb(255, 64, 129);
+    color: #fff;
+}
+
+.footer-right .footer-right-buy {
+    background: #f40000;
+}
+
+.success {
+    height: 100rpx;
+    width: 300rpx;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    line-height: 100rpx;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -150rpx;
+    margin-top: -50rpx;
+}
+
+.custom {
+    height: 100%;
+    width: 125rpx;
+    position: relative;
+}
+
+button {
+    height: 100rpx;
+    width: 125rpx;
+    background: #fff;
+    font-size: 15rpx;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+}
+
+.kefu {
+    height: 100%;
+    width: 125rpx;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.kefu image {
+    width: 40%;
+    margin-left: 30%;
+}
+
+.kefu text {
+    width: 100%;
+    font-size: 25rpx;
+    line-height: 50rpx;
+    text-align: center;
+}
+
+.index {
+    height: 100%;
+    width: 125rpx;
+    font-size: 25rpx;
+    text-align: center;
+    border-right: 1rpx solid #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.index-img {
+    width: 100%;
+}
+
+.index-img image {
+    width: 40%;
+    margin-right: 15rpx;
+}
+
+.index view {
+    height: 50rpx;
+    line-height: 50rpx;
+}
+
+.imgbg {
+    background: #333;
+    color: #fff;
+}
+
+.img-cover {
+    height: 100%;
+    width: 100%;
+    background: #000;
+    color: #fff;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+}
+
+.share-cover {
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.share-cover-all {
+    height: 260rpx;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: #fff;
+    display: flex;
+    justify-content: space-around;
+}
+
+.bar {
+    height: 60%;
+    width: 1rpx;
+    background: linear-gradient(#fff, #999, #fff);
+    margin-top: 3%;
+}
+
+.share-button, .creat-pic {
+    height: 60%;
+    width: 50%;
+    font-size: 30rpx;
+    margin-top: 15rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.share-button image {
+    width: 18%;
+}
+
+.share-button  button {
+    height: 60%;
+    width: 50%;
+    opacity: 0;
+}
+
+.creat-pic image {
+    width: 18%;
+}
+
+.quxiao {
+    height: 80rpx;
+    width: 100%;
+    text-align: center;
+    line-height: 80rpx;
+    border-top: 1px solid #ccc;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}

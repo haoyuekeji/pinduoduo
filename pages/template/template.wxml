@@ -1,0 +1,297 @@
+<!-- 待付款 -->
+<template name='waitepay'>
+    <view class='block' wx:for="{{cons}}" wx:key="index">
+        <view class="img">
+            <image src='{{item.imgurl}}' alt="苏州皓月网络科技有限公司" mode='widthFix'></image>
+        </view>
+        <view class='con'>
+            <text>{{item.con}}</text>
+            <view class='details'>
+                <view>颜色:{{item.color}} \ 尺码：{{item.size}} \ 数量：{{item.amount}}</view>
+                <view>
+                    <text>￥{{item.priceNew}}</text>
+                    <view class='pintuan'>
+                        <view>拼单中</view>
+                        <text>差4人</text>
+                    </view>
+                </view>
+
+            </view>
+            <form report-submit="true" bindsubmit='formId'>
+                <view class='diffent'>
+                    <button form-type='submit' bindtap='cancle' class='background-cancle'>取消订单</button>
+                    <button form-type='submit' bindtap='pay' class='bold-pay'>付款</button>
+                </view>
+            </form>
+        </view>
+    </view>
+</template>
+
+<!-- 待拼单 -->
+<template name='waitepin'>
+    <view class='block' wx:for="{{cons}}" wx:key="index">
+        <view class="img" catchtap='cover'>
+            <image src='{{item.imgurl}}' alt="苏州皓月网络科技有限公司" mode='widthFix'></image>
+        </view>
+        <view class='con'>
+            <text catchtap='cover'>{{item.con}}</text>
+            <view class='details' catchtap='cover'>
+                <view>颜色:{{item.color}} \ 尺码：{{item.size}} \ 数量：{{item.amount}}</view>
+                <view>
+                    <text>￥{{item.priceNew}}</text>
+                    <view class='pintuan'>
+                        <view>拼单中</view>
+                        <text>差4人</text>
+                    </view>
+                </view>
+            </view>
+            <form report-submit="true" bindsubmit='formId'>
+                <view class='diffent'>
+                    <button form-type='submit' open-type='contact' class='background-cancle'>联系客服</button>
+                    <button form-type='submit' open-type='share' class='bold-pay'>邀请好友拼单</button>
+                </view>
+            </form>
+        </view>
+    </view>
+
+</template>
+
+<!-- 待发货 -->
+<template name='waitesend'>
+    <view class='block' wx:for="{{cons}}" wx:key="index">
+        <view class="img" catchtap='cover'>
+            <image src='{{item.imgurl}}' alt="苏州皓月网络科技有限公司" mode='widthFix'></image>
+        </view>
+        <view class='con'>
+            <text catchtap='cover'>{{item.con}}</text>
+            <view class='details' catchtap='cover'>
+                <view>颜色:{{item.color}} \ 尺码：{{item.size}} \ 数量：{{item.amount}}</view>
+                <text>￥{{item.priceNew}}</text>
+            </view>
+            <form report-submit='true' bindsubmit='formId'>
+                <view class='diffent'>
+                    <button form-type='submit' open-type='contact' class='background-cancle'>联系客服</button>
+                    <button form-type='submit' bindtap='payagain' class='bold-pay'>再次购买</button>
+                </view>
+            </form>
+
+        </view>
+    </view>
+</template>
+
+<!-- 待收货 -->
+<template name='waitetaken'>
+    <view class='block' wx:for="{{cons}}" wx:key="index">
+        <view class="img" catchtap='cover'>
+            <image src='{{item.imgurl}}' alt="苏州皓月网络科技有限公司" mode='widthFix'></image>
+        </view>
+        <view class='con'>
+            <text catchtap='cover'>{{item.con}}</text>
+            <view class='details' catchtap='cover'>
+                <view>颜色:{{item.color}} \ 尺码：{{item.size}} \ 数量：{{item.amount}}</view>
+                <text>￥{{item.priceNew}}</text>
+            </view>
+            <form report-submit="true" bindsubmit='formId'>
+                <view class='diffent'>
+                    <button form-type='submit' open-type='contact' class='background-cancle'>联系客服</button>
+                    <button form-type='submit' bindtap='sure' class='bold-pay'>确认收货</button>
+                </view>
+            </form>
+        </view>
+    </view>
+</template>
+
+<!-- 待评价 -->
+<template name='waitemessage'>
+    <view class='block' wx:for="{{cons}}" wx:key="index">
+        <view class="img">
+            <image src='{{item.imgurl}}' alt="苏州皓月网络科技有限公司" mode='widthFix'></image>
+        </view>
+        <view class='con'>
+            <text>{{item.con}}</text>
+            <view class='details'>
+                <view>颜色:{{item.color}} \ 尺码：{{item.size}} \ 数量：{{item.amount}}</view>
+                <text>￥{{item.priceNew}}</text>
+            </view>
+            <form report-submit="true" bindsubmit='formId'>
+                <view class='diffent'>
+                    <button form-type='submit' bindtap='check' class='background-cancle'>查看物流</button>
+                    <button form-type='submit' bindtap='payagain' class='background-cancle'>再次购买</button>
+                    <button form-type='submit' bindtap='judge' class='bold-pay'>立即评价</button>
+                </view>
+            </form>
+        </view>
+    </view>
+</template>
+
+<!-- 已完成 -->
+<template name='allready'>
+    <view class='block' wx:for="{{cons}}" wx:key="index">
+        <view class="img" catchtap='cover'>
+            <image src='{{item.imgurl}}' alt="苏州皓月网络科技有限公司" mode='widthFix'></image>
+        </view>
+        <view class='con'>
+            <text catchtap='cover'>{{item.con}}</text>
+            <view class='details' catchtap='cover'>
+                <view>颜色:{{item.color}} \ 尺码：{{item.size}} \ 数量：{{item.amount}}</view>
+                <text>￥{{item.priceNew}}</text>
+            </view>
+            <form report-submit='true' bindsubmit='formId'>
+                <view class='diffent'>
+                    <button form-type='submit' bindtap="check" class='background-cancle'>查看物流</button>
+                    <button form-type='submit' bindtap="del" class='background-cancle'>删除</button>
+                    <button form-type='submit' bindtap="payagain" class='black-button'>再次购买</button>
+                </view>
+            </form>
+        </view>
+    </view>
+</template>
+
+<!-- 待拼团 -->
+<template name='alert_pin'>
+    <view class='message' catchtap='kong'>
+        <icon type='cancel' size='28' color='#000' catchtap='cover'></icon>
+        <view class='title'>
+            <text>拼单还未成功！</text>
+            <image src='../../images/loading.png' mode='widthFix'></image>
+        </view>
+        <view class='message-con'>
+            <view class='message-con-left'>
+                <image src='../../images/biaozhu.png' mode='widthFix'></image>
+            </view>
+            <view class='message-con-right'>
+                <view>大叔 15150141311</view>
+                <view>苏州 常熟市 新颜路 *****苏州 常熟市 新颜路 *****苏州 常 熟市 新颜路 *****</view>
+            </view>
+        </view>
+        <view class='message-nums'>
+            <view>拼单中！ 还差
+                <text>4</text> 个名额
+            </view>
+            <view> 剩余时间22:52:32:20</view>
+        </view>
+        <view class='message-people'>
+            <view>
+                <image src='https://wx.qlogo.cn/mmopen/vi_32/JiaaPP4W5L72nvSiak82Xpysk7MaiajoBDzybFkJeW51EPzuT5ujtTkeGb8vSdmBP3BLq3ibRzATymbbrBib0Fsh3vw/0' mode='widthFix'></image>
+
+            </view>
+        </view>
+
+        <view class='information'>
+            <view>
+                <text>订单编号：2131546324654634</text>
+                <text class='copy' catchtap='copy' data-con='cop'>复制</text>
+            </view>
+            <view>
+                <text>物流单号：555555555555</text>
+            </view>
+            <view>
+                <text>下单时间：  2017/9/20  09:20:21</text>
+            </view>
+        </view>
+    </view>
+</template>
+
+<!-- 待发货 -->
+<template name='alert_send'>
+    <view class='message' catchtap='kong'>
+        <icon type='cancel' size='28' color='#000' catchtap='cover'></icon>
+        <view class='title'>
+            <text>等待买家发货！</text>
+            <image src='../../images/waitingsend.png' mode='widthFix'></image>
+        </view>
+        <view class='message-con margin'>
+            <view class='message-con-left'>
+                <image src='../../images/biaozhu.png' mode='widthFix'></image>
+            </view>
+            <view class='message-con-right'>
+                <view>大叔 15150141311</view>
+                <view>苏州 常熟市 新颜路 *****苏州 常熟市 新颜路 *****苏州 常 熟市 新颜路 *****</view>
+            </view>
+        </view>
+
+
+        <view class='information'>
+            <view>
+                <text>订单编号：2131546324654634</text>
+                <text class='copy' catchtap='copy' data-con='cop'>复制</text>
+            </view>
+            <view>
+                <text>物流单号：555555555555</text>
+            </view>
+            <view>
+                <text>下单时间：  2017/9/20  09:20:21</text>
+            </view>
+        </view>
+    </view>
+</template>
+
+
+<!-- 已发货 -->
+<template name='alert_sended'>
+    <view class='message' catchtap='kong'>
+        <icon type='cancel' size='28' color='#000' catchtap='cover'></icon>
+        <view class='title'>
+            <text>买家已发货！</text>
+            <image src='../../images/sended.png' mode='widthFix'></image>
+        </view>
+        <view class='message-con margin'>
+            <view class='message-con-left'>
+                <image src='../../images/biaozhu.png' mode='widthFix'></image>
+            </view>
+            <view class='message-con-right'>
+                <view>大叔 15150141311</view>
+                <view>苏州 常熟市 新颜路 *****苏州 常熟市 新颜路 *****苏州 常 熟市 新颜路 *****</view>
+            </view>
+        </view>
+
+
+        <view class='information'>
+            <view>
+                <text>订单编号：2131546324654634</text>
+                <text class='copy' catchtap='copy' data-con='cop'>复制</text>
+            </view>
+            <view>
+                <text>物流单号：555555555555</text>
+            </view>
+            <view>
+                <text>下单时间：  2017/9/20  09:20:21</text>
+            </view>
+        </view>
+    </view>
+</template>
+
+
+<!-- 订单已完成 -->
+<template name='alert_allready'>
+    <view class='message' catchtap='kong'>
+        <icon type='cancel' size='28' color='#000' catchtap='cover'></icon>
+        <view class='title'>
+            <text>订单已完成！</text>
+            <image src='../../images/allreadyed.png' mode='widthFix'></image>
+        </view>
+        <view class='message-con margin'>
+            <view class='message-con-left'>
+                <image src='../../images/biaozhu.png' mode='widthFix'></image>
+            </view>
+            <view class='message-con-right'>
+                <view>大叔 15150141311</view>
+                <view>苏州 常熟市 新颜路 *****苏州 常熟市 新颜路 *****苏州 常 熟市 新颜路 *****</view>
+            </view>
+        </view>
+
+
+        <view class='information'>
+            <view>
+                <text>订单编号：2131546324654634</text>
+                <text class='copy' catchtap='copy' data-con='cop'>复制</text>
+            </view>
+            <view>
+                <text>物流单号：555555555555</text>
+            </view>
+            <view>
+                <text>下单时间：  2017/9/20  09:20:21</text>
+            </view>
+        </view>
+    </view>
+</template>

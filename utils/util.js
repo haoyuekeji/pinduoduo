@@ -1,3 +1,4 @@
+const request = require('./request.js')
 const formatTime = date => {
     const year = date.getFullYear()
     const month = date.getMonth() + 1
@@ -13,6 +14,8 @@ const formatNumber = n => {
     n = n.toString()
     return n[1] ? n : '0' + n
 }
+
+//根据订单状态进行查询
 function getstatus(stu, localhost, openid, token, callback) {
     switch (stu) {
         case 0:
@@ -78,6 +81,8 @@ function getstatus(stu, localhost, openid, token, callback) {
             break;
     }
 }
+
+
 module.exports = {
     formatTime: formatTime,
     getstatus: getstatus

@@ -1,0 +1,112 @@
+<view class="container">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-active-color='#f70000' circular="true">
+        <block wx:for="{{imgUrls}}" wx:key="index">
+            <swiper-item bindtap="showIndexImg" data-id="{{index}}">
+                <image src="{{item}}" class="slide-image" mode="widthFix" data-id="{{index}}"></image>
+            </swiper-item>
+        </block>
+    </swiper>
+    <view class="body">
+        <view class="con padding">
+            {{con}}
+        </view>
+        <view class="price padding">
+            <view class="price-con">
+                <text class="price-now">￥{{priceNew}}</text>
+                <view class="nonetext">
+                    <text class="nonetext" wx:if="{{priceOldstu}}">￥{{priceOld}}</text>
+                </view>
+            </view>
+        </view>
+        <view class="guige padding" bindtap='express'>
+            <view class="express-con">
+                <text> 快递: {{deliverPrice_price}}  ({{provinceName}})</text>
+                <text>销量：{{monthSale}}</text>
+            </view>
+        </view>
+        <view class="guige padding" bindtap="ChooseGuige">
+            <view class="price-con">选择： 颜色 尺码</view>
+            <view class="price-con">
+                <image src="../../images/icon/come.png"></image>
+            </view>
+        </view>
+        <view class="details">图文详情</view>
+        <view class='cons-img'>
+            <image src="{{item}}" wx:for="{{imgurl}}" wx:key="id" id="{{index}}" mode="widthFix" data-index='{{item}}' data-id="{{index}}" bindtap='showImg'></image>
+            <view hidden="{{stu}}">@苏州皓月网络科技提供技术支持</view>
+        </view>
+    </view>
+    <view class="cover" hidden="{{cover}}" bindtap="ChooseGuige">
+        <view class="guige-details" catchtap="guige_details">
+            <icon type="cancel" color="#333333" size="23" bindtap="ChooseGuige" />
+            <view class="img">
+                <image src="{{guige_img}}" mode="aspectFill"></image>
+            </view>
+            <view class="cover-details">
+                <view class="cover-price">￥{{price}}</view>
+                <view class="cover-nums">库存{{kucun}}件</view>
+                <view>请选择颜色:{{choosecolor}} 尺码:{{choosesize}}</view>
+            </view>
+            <view class="clear"></view>
+            <view class="chima">
+                <label>颜色</label>
+                <view class="chima-details">
+                    <view wx:for="{{color}}" catchtap='ChangeColor' wx:key="index" data-index='{{index}}' data-name='{{item}}' class='yanse-details-view {{index===Colorindex?"imgbg":""}}'>{{item}}</view>
+                </view>
+            </view>
+            <view class="chima">
+                <label>尺码</label>
+                <view class="chima-details">
+                    <view class='chima-details-view {{index===Sizeindex?"imgbg":""}}' wx:for="{{size}}" wx:key="index" data-index='{{index}}' data-name='{{item}}' catchtap='ChangeSize'>{{item}}</view>
+                </view>
+            </view>
+            <view class="number">
+                <label>购买数量</label>
+                <view class="number-num">
+                    <view style="border-left:1rpx solid #cccccc;color:{{color}}" catchtap="NumJian">-</view>
+                    <view>{{nums}}</view>
+                    <view catchtap="NumJia">+</view>
+                </view>
+            </view>
+            <view class="cover-footer">
+                <view class="footer-right-car" catchtap='SetCar'>加入购物车</view>
+                <view class="footer-right-buy" catchtap='buy'>立即购买</view>
+            </view>
+        </view>
+    </view>
+    <view class="footer">
+        <view class='index'>
+            <view class='index-img' bindtap='index'>
+                <image src='../../images/icon/home1.png' mode='widthFix'></image>
+            </view>
+            <view>进店逛逛</view>
+        </view>
+        <view class='custom'>
+            <button open-type='contact' size='default' type='default'></button>
+            <view class="kefu">
+                <image src='../../images/icon/kefu.png' mode='widthFix'></image>
+                <text>联系客服</text>
+            </view>
+        </view>
+        <view class="footer-right">
+            <view class="footer-right-car" bindtap="ChooseGuige">加入购物车</view>
+            <view class="footer-right-buy" bindtap="ChooseGuige">立即购买</view>
+        </view>
+    </view>
+</view>
+<view class='success' wx:if='{{success}}'>{{success}}</view>
+<view class='share-cover' bindtap='shareShow' hidden='{{share_stu}}'>
+    <view class='share-cover-all'>
+        <view class='share-button'>
+            <button open-type='share' size='default' type='primary'></button>
+            <image src='../../images/icon/person_center.png' mode='widthFix'></image>
+            <view>点击转发</view>
+        </view>
+        <view class='bar'></view>
+        <view bindtap='creatPicture' class='creat-pic'>
+            <image src='../../images/icon/pic.png' mode='widthFix'></image>
+            <view>点击生成图片</view>
+        </view>
+    </view>
+    <view class='quxiao' catchtap='shareShow'>取消</view>
+</view>

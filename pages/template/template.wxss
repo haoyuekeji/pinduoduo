@@ -1,0 +1,283 @@
+.cons {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 15rpx;
+}
+
+.zanwu {
+    font-size: 30rpx;
+    position: absolute;
+    top: 20rpx;
+    left: 0;
+    z-index: -1;
+}
+
+.block {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background: #fff;
+    margin-bottom: 5rpx;
+}
+
+.img {
+    width: 25%;
+    padding: 15rpx 5rpx;
+    box-sizing: border-box;
+}
+
+.img image {
+    width: 100%;
+}
+
+.con {
+    height: auto;
+    width: 75%;
+    padding: 15rpx;
+    font-size: 30rpx;
+    display: flex;
+    flex-direction: column;
+}
+
+.con text {
+    height: 80rpx;
+    width: 100%;
+    line-height: 40rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.details {
+    height: auto;
+    width: 100%;
+    color: #999;
+    font-size: 25rpx;
+}
+
+.pintuan {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    line-height: 40rpx;
+}
+
+.pintuan view {
+    width: 150rpx;
+}
+
+.details view {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.details text {
+    font-size: 30rpx;
+    color: #f40000;
+}
+
+.pintuan text {
+    font-size: 25rpx;
+}
+
+.diffent {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-bottom: 15rpx;
+}
+
+.diffent view {
+    height: 58rpx;
+    min-width: 130rpx;
+    padding: 0 15rpx;
+    text-align: center;
+    line-height: 58rpx;
+    margin-left: 15rpx;
+    font-size: 28rpx;
+    color: #fff;
+}
+
+.diffent button {
+    height: 58rpx;
+    min-width: 130rpx;
+    padding: 0 15rpx;
+    text-align: center;
+    line-height: 58rpx;
+    margin-left: 15rpx;
+    font-size: 28rpx;
+    color: #fff;
+}
+
+.background-cancle {
+    background: #999;
+}
+
+.bold-pay {
+    background: #cc0240;
+}
+
+.black-button {
+    background: #000;
+}
+
+.message {
+    max-height: 70%;
+    width: 100%;
+    background: #f1f1f1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-top: 120rpx;
+    overflow-y: scroll;
+}
+
+.message icon {
+    position: absolute;
+    right: 15rpx;
+    top: 15rpx;
+}
+
+.message .title {
+    height: 100rpx;
+    width: 100%;
+    padding: 0 25%;
+    box-sizing: border-box;
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.message .title image {
+    width: 15%;
+}
+
+.message-con {
+    height: auto;
+    width: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 15rpx;
+}
+
+.message-con-left {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.message-con-left image {
+    width: 25%;
+}
+
+.message-con-right {
+    height: auto;
+    width: 80%;
+    padding: 15rpx 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 30rpx;
+}
+
+.message-con-right view {
+    margin-bottom: 15rpx;
+}
+
+.message-nums {
+    height: auto;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.message-nums view {
+    font-size: 30rpx;
+    display: inline-block;
+}
+
+.message-people {
+    height: auto;
+    width: 100%;
+    padding: 0 50rpx;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.message-people view {
+    width: 80rpx;
+    height: 80rpx;
+    margin: 10rpx;
+    position: relative;
+}
+
+.message-people view image {
+    width: 80rpx;
+    border-radius: 80rpx;
+}
+
+.message-people view:first-child::before {
+    content: "拼主";
+    color: #fff;
+    font-size: 18rpx;
+    padding: 5rpx 10rpx;
+    background: #049f00;
+    position: absolute;
+    left: -15rpx;
+    top: -10rpx;
+    border-radius: 15rpx;
+}
+
+.information {
+    height: 200rpx;
+    width: 100%;
+    margin-top: 15rpx;
+    padding: 25rpx;
+    box-sizing: border-box;
+    background: #fff;
+    color: #999;
+    font-size: 30rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around
+}
+
+.information view {
+    height: 60rpx;
+    line-height: 60rpx;
+    display: flex;
+    align-items: center;
+}
+
+.copy {
+    height: 30rpx;
+    margin-left: 35rpx;
+    border: 1rpx solid #999;
+    font-size: 20rpx;
+    line-height: 30rpx;
+    padding: 0 10rpx;
+    border-radius: 10rpx;
+}
+.margin{
+    margin-top: 100rpx;
+}

@@ -1,6 +1,8 @@
 const app = getApp()
 const localhost = app.localhost.localhost
 const token = app.token.token
+const myData = require('../../utils/data.js');//获取静态数据
+const request = require('../../utils/request.js');//获取静态数据
 Page({
 
     /**
@@ -8,36 +10,8 @@ Page({
      */
     data: {
         unindex: 0,
-        text: [
-            {
-                text: '待付款',
-                url: '../../images/waitpay.png'
-            },
-            {
-                text: '待拼单',
-                url: '../../images/merge.png'
-            },
-            {
-                text: '待发货',
-                url: '../../images/waitsend.png'
-            },
-            {
-                text: '待收货',
-                url: '../../images/waittake.png'
-            },
-            {
-                text: '待评价',
-                url: '../../images/wait.png'
-            }
-        ],
-        url: [
-            '../../images/waitpay_ing.png',
-            '../../images/merge_ing.png',
-            '../../images/waitsend_ing.png',
-            '../../images/waittake_ing.png',
-            '../../images/wait_ing.png'
-        ]
-
+        text: myData.text,
+        url: myData.url
     },
     setting: function () {
         wx.openSetting({
@@ -81,16 +55,16 @@ Page({
                 }
             })
         }
-
         wx.showLoading({
             title: '加载中',
         })
-        wx.request({
-            url: localhost + "/customer/proSearch",
-            data: {
+        
+        request.request(
+            "/customer/proSearch",
+            {
                 token: token
             },
-            success: function (res) {
+            function (res) {
                 const content = res.data.data;
                 const cons = [];
                 var monthSale = 0;
@@ -105,13 +79,7 @@ Page({
                     cons: cons
                 })
                 wx.hideLoading()
-            }
-        })
-
-
-
-
-
+            })
     },
 
     /**

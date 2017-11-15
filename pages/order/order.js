@@ -2,7 +2,9 @@ const app = getApp();
 const token = app.token.token;
 const localhost = app.localhost.localhost;
 const appid = app.appid.appid;
-var util = require('../../utils/util.js');
+const util = require('../../utils/util.js');//获取数据
+const myData = require('../../utils/data.js');//获取静态数据
+let myformId = ''
 Page({
 
     /**
@@ -10,35 +12,12 @@ Page({
      */
     data: {
         unindex: 0,
-        text: [
-            {
-                text: '待付款',
-                url: '../../images/waitpay.png'
-            },
-            {
-                text: '待拼单',
-                url: '../../images/merge.png'
-            },
-            {
-                text: '待发货',
-                url: '../../images/waitsend.png'
-            },
-            {
-                text: '待收货',
-                url: '../../images/waittake.png'
-            },
-            {
-                text: '待评价',
-                url: '../../images/wait.png'
-            }
-        ],
-        url: [
-            '../../images/waitpay_ing.png',
-            '../../images/merge_ing.png',
-            '../../images/waitsend_ing.png',
-            '../../images/waittake_ing.png',
-            '../../images/wait_ing.png'
-        ]
+        text: myData.text,
+        url: myData.url,
+        cover_stu: true
+    },
+    kong: function () {
+
     },
     choose: function (e) {
         const ind = e.target.dataset.index
@@ -51,6 +30,57 @@ Page({
             unindex: 5
         })
     },
+    cover: function () {
+        const cover_stu = this.data.cover_stu
+        this.setData({
+            cover_stu: !cover_stu
+        })
+
+    },
+    copy: function (e) {
+        const data = e.target.dataset.con
+        wx.setClipboardData({
+            data: data,
+        })
+    },
+    formId: function (e) {
+        myformId = e.detail.formId
+    },
+    //取消订单
+    cancle: function () {
+        setTimeout(function () {
+            console.log('我是：' + myformId)
+        }, 5)
+
+    },
+    //付款
+    pay: function () {
+
+    },
+    //邀请好友
+    invite: function () {
+
+    },
+    //再次购买
+    payagain: function () {
+
+    },
+    //确认收货
+    sure: function () {
+
+    },
+    //查看物流
+    check: function () {
+
+    },
+    //评论
+    judge: function () {
+
+    },
+    //删除已完成订单
+    del: function () {
+
+    },
     /**
      * 生命周期函数--监听页面加载
      */
@@ -62,8 +92,8 @@ Page({
         this.setData({
             unindex: parseInt(ind)
         })
+        //数据获取
         const getstatus = util.getstatus(0, localhost, openid, token, function (data) {
-
             for (let i = 0; i < data.length; i++) {
                 let imgurl = data[i].products[0].indexImages.split(",")[0];
                 let con = data[i].products[0].pname;
@@ -90,7 +120,7 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-
+        wx.hideShareMenu({})
     },
 
     /**
@@ -125,6 +155,9 @@ Page({
      * 用户点击右上角分享
      */
     onShareAppMessage: function () {
-
+        return {
+            title:'',
+            path:'pages/details/details'
+        }
     }
 })
