@@ -1,0 +1,38 @@
+/* address.wxss */
+
+.con {
+    height: 60rpx;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 30rpx;
+    line-height: 30rpx;
+    border-bottom: 1rpx solid #f2f2f2;
+}
+
+text {
+    height: 50rpx;
+    text-align: center;
+    flex: 1;
+    line-height: 50rpx;
+}
+
+picker, input {
+   width: 600rpx;
+}
+
+picker {
+    height: 100%;
+    width: 80%;
+    line-height: 100%;
+}
+
+.save {
+    height: 80rpx;
+    width: 70%;
+    color: #fff;
+    text-align: center;
+    line-height: 80rpx;
+    background: #cc0240;
+    margin: 15rpx auto;
+}

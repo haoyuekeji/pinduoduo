@@ -6,7 +6,11 @@
         "pages/my/my",
         "pages/new/new",
         "pages/order/order",
-        "pages/details/details"
+        "pages/details/details",
+        "pages/more-pin/more-pin",
+        "pages/join/join",
+        "pages/sure/sure",
+        "pages/address/address"
     ],
     "window": {
         "backgroundTextStyle": "light",

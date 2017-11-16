@@ -1,0 +1,38 @@
+<view class='container'>
+    <view class='add-address'>
+        <view class='selfadd'>
+            <view class='iconfont icon-jia'></view>
+            <text>手动添加收货地址</text>
+        </view>
+        <view class='wechatadd'>
+            <view class='iconfont icon-weixin'></view>
+            <text>一键获取微信地址</text>
+        </view>
+    </view>
+    <view class='block' wx:key="index">
+        <view class="img">
+            <image src='{{item.imgurl}}' alt="苏州皓月网络科技有限公司" mode='widthFix'></image>
+        </view>
+        <view class='con'>
+            <text>{{item.con}}</text>
+            <view class='details'>
+                <view>颜色:{{item.color}} \ 尺码：{{item.size}} \ 数量：{{item.amount}}</view>
+                <view>
+                    <text>￥{{item.priceNew}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class='footer'>
+    <view class='showmoney'>
+        <view>实付款：
+            <text>￥56.20</text>
+            <text>免运费</text>
+        </view>
+    </view>
+    <view class='pay'>立即支付</view>
+
+
+</view>

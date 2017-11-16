@@ -1,0 +1,33 @@
+<view class="container">
+    <view class='cons'>
+        <view class='cons-left'>
+            <image src='https://wx.qlogo.cn/mmopen/vi_32/JiaaPP4W5L72nvSiak82Xpysk7MaiajoBDzybFkJeW51EPzuT5ujtTkeGb8vSdmBP3BLq3ibRzATymbbrBib0Fsh3vw/0' mode='widthFix'></image>
+        </view>
+        <view class='cons-right'>
+            <view class='con'>女士短裙夏季薄款纯棉打造2017新款女士短裙夏季 薄款纯棉打造2017新款</view>
+            <view class='price'>
+                <text>￥56.20</text>
+                <text>10人拼单/已拼28件</text>
+            </view>
+        </view>
+    </view>
+    <view class='join'>
+        <view class='people'>
+            <view class='people-img'>
+                <image src='https://wx.qlogo.cn/mmopen/vi_32/JiaaPP4W5L72nvSiak82Xpysk7MaiajoBDzybFkJeW51EPzuT5ujtTkeGb8vSdmBP3BLq3ibRzATymbbrBib0Fsh3vw/0' mode='widthFix' wx:if="{{a}}"></image>
+                <view wx:else class='jia iconfont icon-jia'></view>
+            </view>
+
+        </view>
+        <view class='residue'>仅剩
+            <text>4</text> 个名额 22:52:32:20后结束</view>
+        <view class='join-sure'>
+            <text>一键参团</text>
+        </view>
+    </view>
+    <view class='needknow'>
+        <text>拼单须知 </text>
+        <text>好友拼单 人满发货  人不满退款 </text>
+    </view>
+</view>
+<view class='haoyue'>@苏州皓月科技提供技术支持</view>

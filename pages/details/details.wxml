@@ -1,67 +1,232 @@
 <view class="container">
     <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-active-color='#f70000' circular="true">
         <block wx:for="{{imgUrls}}" wx:key="index">
-            <swiper-item bindtap="showIndexImg" data-id="{{index}}">
-                <image src="{{item}}" class="slide-image" mode="widthFix" data-id="{{index}}"></image>
+            <swiper-item bindtap="showIndexImg" data-id="{{index}}" class="slide-image">
+                <image src="{{item}}" mode="widthFix" data-id="{{index}}"></image>
             </swiper-item>
         </block>
     </swiper>
     <view class="body">
-        <view class="con padding">
-            {{con}}
+        <view class='cons'>
+            <view class='con'>
+                {{con}}
+            </view>
+            <view class="price">
+                <view class='price-left'>
+                    <text>￥{{priceNew}}</text>
+                    <view wx:if="{{priceOldstu}}">￥{{priceOld}}</view>
+                </view>
+                <view class='price-right'>10人拼单</view>
+            </view>
         </view>
-        <view class="price padding">
-            <view class="price-con">
-                <text class="price-now">￥{{priceNew}}</text>
-                <view class="nonetext">
-                    <text class="nonetext" wx:if="{{priceOldstu}}">￥{{priceOld}}</text>
+
+        <view class='parameter'>
+            <view>商品参数</view>
+            <text>商品参数</text>
+            <text>商品参数</text>
+            <text>商品参数</text>
+            <text>商品参数</text>
+        </view>
+
+        <view class='wechat'>
+            <view class='wechat-img'>
+                <image src='../../images/wechat.png' mode='widthFix'></image>
+            </view>
+            <view class='wechat-con'>
+                <view class='wechat-con-title'>
+                    <text>微信企业认证</text>
+                    <text>3亿人都在用</text>
+                </view>
+                <view class='icon'>
+                    <view>
+                        <view class='icon-icon'>
+                            <icon type='success_no_circle' size='12' color='#cc0240'></icon>
+                        </view>
+                        <text>退货补运费</text>
+                    </view>
+                    <view>
+                        <view class='icon-icon'>
+                            <icon type='success_no_circle' size='12' color='#cc0240'></icon>
+                        </view>
+                        <text>正品商品</text>
+                    </view>
+                    <view>
+                        <view class='icon-icon'>
+                            <icon type='success_no_circle' size='12' color='#cc0240'></icon>
+                        </view>
+                        <text>实拍认证</text>
+                    </view>
+                </view>
+            </view>
+            <view class='wechat-arrow'>
+                <image src='../../images/come.png' mode='widthFix'></image>
+            </view>
+        </view>
+        <view class='pin'>
+            <view class='pin-top'>
+                <view class='pin-left'>
+                    632人在拼单
+                </view>
+                <text>查看更多>></text>
+            </view>
+            <view class='pin-cons'>
+                <view class='pin-con'>
+                    <view class='pin-left'>
+                        <image src='https://wx.qlogo.cn/mmopen/vi_32/JiaaPP4W5L72nvSiak82Xpysk7MaiajoBDzybFkJeW51EPzuT5ujtTkeGb8vSdmBP3BLq3ibRzATymbbrBib0Fsh3vw/0' mode='widthFix'></image>
+                        <view>
+                            <text>大叔</text>
+                            <view>
+                                <text>还差3人</text>
+                                <text>剩余22：22：22</text>
+                            </view>
+                        </view>
+                    </view>
+                    <view class='pin-right'>
+                        参团
+                    </view>
                 </view>
             </view>
         </view>
-        <view class="guige padding" bindtap='express'>
-            <view class="express-con">
-                <text> 快递: {{deliverPrice_price}}  ({{provinceName}})</text>
-                <text>销量：{{monthSale}}</text>
+        <view class='judge'>
+            <view class='judge-top'>
+                <view class='judge-left'>
+                    商品评价
+                </view>
+                <text>查看更多>></text>
+            </view>
+            <view class='judge-cons'>
+
+
+                <view class='judge-con'>
+                    <view class='judge-top'>
+                        <view class='judge-top-left'>
+                            <image src='https://wx.qlogo.cn/mmopen/vi_32/JiaaPP4W5L72nvSiak82Xpysk7MaiajoBDzybFkJeW51EPzuT5ujtTkeGb8vSdmBP3BLq3ibRzATymbbrBib0Fsh3vw/0' mode='widthFix'></image>
+                            <text>皓月当空</text>
+                        </view>
+                        <view class='judge-top-right'>2017.10.23</view>
+                    </view>
+                    <view class='judge-bootom'>
+                        卖家发货很快，价格实惠，颜色不错卖家发货很快，价格实惠，颜色不错卖家发 货很快，价格实惠，颜色不错
+                    </view>
+                </view>
+
+
+
+                <view class='judge-con'>
+                    <view class='judge-top'>
+                        <view class='judge-top-left'>
+                            <image src='https://wx.qlogo.cn/mmopen/vi_32/JiaaPP4W5L72nvSiak82Xpysk7MaiajoBDzybFkJeW51EPzuT5ujtTkeGb8vSdmBP3BLq3ibRzATymbbrBib0Fsh3vw/0' mode='widthFix'></image>
+                            <text>皓月当空</text>
+                        </view>
+                        <view class='judge-top-right'>2017.10.23</view>
+                    </view>
+                    <view class='judge-bootom'>
+                        卖家发货很快，价格实惠，颜色不错卖家发货很快，价格实惠，颜色不错卖家发 货很快，价格实惠，颜色不错
+                    </view>
+                </view>
             </view>
         </view>
-        <view class="guige padding" bindtap="ChooseGuige">
-            <view class="price-con">选择： 颜色 尺码</view>
-            <view class="price-con">
-                <image src="../../images/icon/come.png"></image>
-            </view>
-        </view>
-        <view class="details">图文详情</view>
+
+        <view class="title">图文详情</view>
         <view class='cons-img'>
             <image src="{{item}}" wx:for="{{imgurl}}" wx:key="id" id="{{index}}" mode="widthFix" data-index='{{item}}' data-id="{{index}}" bindtap='showImg'></image>
-            <view hidden="{{stu}}">@苏州皓月网络科技提供技术支持</view>
         </view>
     </view>
-    <view class="cover" hidden="{{cover}}" bindtap="ChooseGuige">
-        <view class="guige-details" catchtap="guige_details">
+    <view class='title'>商品推荐</view>
+    <view class='push'>
+        <navigator url='details' class='push-con'>
+
+            <view class='push-con-img'>
+                <image src='https://wx.qlogo.cn/mmopen/vi_32/JiaaPP4W5L72nvSiak82Xpysk7MaiajoBDzybFkJeW51EPzuT5ujtTkeGb8vSdmBP3BLq3ibRzATymbbrBib0Fsh3vw/0' mode='widthFix'></image>
+            </view>
+            <view class='push-title'>
+                如果你无法简洁的表达你 的想法，那如果你无法简洁的表达你 的想法，那
+            </view>
+            <view class='push-price'>
+                <view>￥3000</view>
+                <text>已团200件</text>
+            </view>
+
+        </navigator>
+
+        <navigator url='details' class='push-con'>
+            <view class='push-con-img'>
+                <image src='https://wx.qlogo.cn/mmopen/vi_32/JiaaPP4W5L72nvSiak82Xpysk7MaiajoBDzybFkJeW51EPzuT5ujtTkeGb8vSdmBP3BLq3ibRzATymbbrBib0Fsh3vw/0' mode='widthFix'></image>
+            </view>
+            <view class='push-title'>
+                如果你无法简洁的表达你 的想法，那如果你无法简洁的表达你 的想法，那
+            </view>
+            <view class='push-price'>
+                <view>￥3000</view>
+                <text>已团200件</text>
+            </view>
+        </navigator>
+
+        <navigator url='details' class='push-con'>
+
+            <view class='push-con-img'>
+                <image src='https://wx.qlogo.cn/mmopen/vi_32/JiaaPP4W5L72nvSiak82Xpysk7MaiajoBDzybFkJeW51EPzuT5ujtTkeGb8vSdmBP3BLq3ibRzATymbbrBib0Fsh3vw/0' mode='widthFix'></image>
+            </view>
+            <view class='push-title'>
+                如果你无法简洁的表达你 的想法，那如果你无法简洁的表达你 的想法，那
+            </view>
+            <view class='push-price'>
+                <view>￥3000</view>
+                <text>已团200件</text>
+            </view>
+
+        </navigator>
+
+
+        <navigator url='details' class='push-con'>
+
+            <view class='push-con-img'>
+                <image src='https://wx.qlogo.cn/mmopen/vi_32/JiaaPP4W5L72nvSiak82Xpysk7MaiajoBDzybFkJeW51EPzuT5ujtTkeGb8vSdmBP3BLq3ibRzATymbbrBib0Fsh3vw/0' mode='widthFix'></image>
+            </view>
+            <view class='push-title'>
+                如果你无法简洁的表达你 的想法，那如果你无法简洁的表达你 的想法，那
+            </view>
+            <view class='push-price'>
+                <view>￥3000</view>
+                <text>已团200件</text>
+            </view>
+
+        </navigator>
+    </view>
+
+
+    <view class="cover" bindtap="ChooseGuige">
+        <view class="cover-body" catchtap="retrun">
             <icon type="cancel" color="#333333" size="23" bindtap="ChooseGuige" />
-            <view class="img">
-                <image src="{{guige_img}}" mode="aspectFill"></image>
+            <view class='cover-top'>
+                <view class="img">
+                    <image src="{{guige_img}}" mode="widthFix"></image>
+                </view>
+
+                <view class="cover-details">
+                    <view class="cover-price">￥{{price}}</view>
+                    <view>请选择颜色:{{choosecolor}} 尺码:{{choosesize}}</view>
+                </view>
             </view>
-            <view class="cover-details">
-                <view class="cover-price">￥{{price}}</view>
-                <view class="cover-nums">库存{{kucun}}件</view>
-                <view>请选择颜色:{{choosecolor}} 尺码:{{choosesize}}</view>
-            </view>
-            <view class="clear"></view>
+
+
             <view class="chima">
                 <label>颜色</label>
                 <view class="chima-details">
                     <view wx:for="{{color}}" catchtap='ChangeColor' wx:key="index" data-index='{{index}}' data-name='{{item}}' class='yanse-details-view {{index===Colorindex?"imgbg":""}}'>{{item}}</view>
                 </view>
             </view>
+
             <view class="chima">
                 <label>尺码</label>
                 <view class="chima-details">
                     <view class='chima-details-view {{index===Sizeindex?"imgbg":""}}' wx:for="{{size}}" wx:key="index" data-index='{{index}}' data-name='{{item}}' catchtap='ChangeSize'>{{item}}</view>
                 </view>
             </view>
+
+
             <view class="number">
-                <label>购买数量</label>
+                <label>数量</label>
                 <view class="number-num">
                     <view style="border-left:1rpx solid #cccccc;color:{{color}}" catchtap="NumJian">-</view>
                     <view>{{nums}}</view>
@@ -69,44 +234,33 @@
                 </view>
             </view>
             <view class="cover-footer">
-                <view class="footer-right-car" catchtap='SetCar'>加入购物车</view>
-                <view class="footer-right-buy" catchtap='buy'>立即购买</view>
+                确定
             </view>
         </view>
     </view>
     <view class="footer">
-        <view class='index'>
-            <view class='index-img' bindtap='index'>
-                <image src='../../images/icon/home1.png' mode='widthFix'></image>
+        <view class='footer-left'>
+            <view class='index'>
+                <view class='index-icon iconfont icon-shouye'></view>
+                <view class='character'>首页</view>
             </view>
-            <view>进店逛逛</view>
-        </view>
-        <view class='custom'>
-            <button open-type='contact' size='default' type='default'></button>
-            <view class="kefu">
-                <image src='../../images/icon/kefu.png' mode='widthFix'></image>
-                <text>联系客服</text>
+            <view class='like'>
+                <view class='index-icon iconfont icon-aixin'></view>
+                <view class='character'>收藏</view>
             </view>
         </view>
-        <view class="footer-right">
-            <view class="footer-right-car" bindtap="ChooseGuige">加入购物车</view>
-            <view class="footer-right-buy" bindtap="ChooseGuige">立即购买</view>
+        <view class='footer-right'>
+            <view class='buyalone'>
+                <text>￥86.6</text>
+                <text>单独购买</text>
+
+            </view>
+            <view class='buytuan'>
+                <text>￥86.6</text>
+                <text>一键拼单</text>
+            </view>
         </view>
     </view>
-</view>
-<view class='success' wx:if='{{success}}'>{{success}}</view>
-<view class='share-cover' bindtap='shareShow' hidden='{{share_stu}}'>
-    <view class='share-cover-all'>
-        <view class='share-button'>
-            <button open-type='share' size='default' type='primary'></button>
-            <image src='../../images/icon/person_center.png' mode='widthFix'></image>
-            <view>点击转发</view>
-        </view>
-        <view class='bar'></view>
-        <view bindtap='creatPicture' class='creat-pic'>
-            <image src='../../images/icon/pic.png' mode='widthFix'></image>
-            <view>点击生成图片</view>
-        </view>
-    </view>
-    <view class='quxiao' catchtap='shareShow'>取消</view>
+
+
 </view>

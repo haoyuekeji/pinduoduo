@@ -65,8 +65,8 @@ Page({
         })
     },
 
-    guige_details: function () {
-        return false
+    retrun: function () {
+       
     },
 
     ChangeColor: function (e) {

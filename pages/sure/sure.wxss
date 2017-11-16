@@ -1,0 +1,158 @@
+page {
+    background: #f1f1f1;
+}
+
+.add-address {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.selfadd, .wechatadd {
+    height: 100rpx;
+    width: 100%;
+    background: #fff;
+    padding: 0 15rpx;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.selfadd view, .wechatadd view {
+    font-size: 60rpx;
+    color: #03c803;
+}
+
+.selfadd view {
+    height: 60rpx;
+    width: 60rpx;
+    font-size: 50rpx;
+    text-align: center;
+    border-radius: 70rpx;
+    line-height: 60rpx;
+    color: #f00;
+    border: 1rpx solid #f00;
+}
+
+.wechatadd {
+    margin-top: 1rpx;
+}
+
+.wechatadd view {
+    font-size: 70rpx;
+    color: #03c803;
+}
+
+.selfadd text, .wechatadd text {
+    font-size: 28rpx;
+    margin-left: 15rpx;
+}
+
+.footer {
+    height: 98rpx;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.showmoney {
+    width: 65%;
+    text-align: center;
+    font-size: 35rpx;
+}
+
+.showmoney text {
+    color: #f00;
+    margin-left: 15rpx;
+}
+
+.showmoney text :first-child {
+    margin-left: 0;
+}
+
+.pay {
+    height: 100%;
+    width: 35%;
+    background: #cc0240;
+    color: #fff;
+    text-align: center;
+    line-height: 98rpx;
+}
+
+block {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background: #fff;
+    margin-bottom: 5rpx;
+}
+
+.img {
+    width: 25%;
+    padding: 15rpx 5rpx;
+    box-sizing: border-box;
+}
+
+.img image {
+    width: 100%;
+}
+
+.con {
+    height: auto;
+    width: 75%;
+    padding: 15rpx;
+    font-size: 30rpx;
+    display: flex;
+    flex-direction: column;
+}
+
+.con text {
+    height: 80rpx;
+    width: 100%;
+    line-height: 40rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.details {
+    height: auto;
+    width: 100%;
+    color: #999;
+    font-size: 25rpx;
+}
+
+.pintuan {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    line-height: 40rpx;
+}
+
+.pintuan view {
+    width: 150rpx;
+}
+
+.details view {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.details text {
+    font-size: 30rpx;
+    color: #f40000;
+}

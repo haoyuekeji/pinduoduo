@@ -1,0 +1,63 @@
+<view class='container'>
+    <view class='pin'>
+        <view class='pin-cons'>
+            <view class='pin-con'>
+                <view class='pin-left'>
+                    <image src='https://wx.qlogo.cn/mmopen/vi_32/JiaaPP4W5L72nvSiak82Xpysk7MaiajoBDzybFkJeW51EPzuT5ujtTkeGb8vSdmBP3BLq3ibRzATymbbrBib0Fsh3vw/0' mode='widthFix'></image>
+                    <view>
+                        <text>大叔</text>
+                        <view>
+                            <text>还差3人</text>
+                            <text>剩余22：22：22</text>
+                        </view>
+                    </view>
+                </view>
+                <view class='pin-right'>
+                    参团
+                </view>
+            </view>
+
+
+
+            <view class='pin-con'>
+                <view class='pin-left'>
+                    <image src='https://wx.qlogo.cn/mmopen/vi_32/JiaaPP4W5L72nvSiak82Xpysk7MaiajoBDzybFkJeW51EPzuT5ujtTkeGb8vSdmBP3BLq3ibRzATymbbrBib0Fsh3vw/0' mode='widthFix'></image>
+                    <view>
+                        <text>大叔</text>
+                        <view>
+                            <text>还差3人</text>
+                            <text>剩余22：22：22</text>
+                        </view>
+                    </view>
+                </view>
+                <view class='pin-right'>
+                    参团
+                </view>
+            </view>
+
+
+
+
+            <view class='pin-con'>
+                <view class='pin-left'>
+                    <image src='https://wx.qlogo.cn/mmopen/vi_32/JiaaPP4W5L72nvSiak82Xpysk7MaiajoBDzybFkJeW51EPzuT5ujtTkeGb8vSdmBP3BLq3ibRzATymbbrBib0Fsh3vw/0' mode='widthFix'></image>
+                    <view>
+                        <text>大叔</text>
+                        <view>
+                            <text>还差3人</text>
+                            <text>剩余22：22：22</text>
+                        </view>
+                    </view>
+                </view>
+                <view class='pin-right'>
+                    参团
+                </view>
+            </view>
+
+
+
+        </view>
+    </view>
+</view>
+<view class='nomore'>没有更多了</view>
+<view class='haoyue'>@苏州皓月科技提供技术支持</view>

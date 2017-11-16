@@ -5,6 +5,7 @@ const appid = app.appid.appid;
 const util = require('../../utils/util.js');//获取数据
 const myData = require('../../utils/data.js');//获取静态数据
 let myformId = ''
+let title = ''
 Page({
 
     /**
